@@ -1,0 +1,12 @@
+- if (typeof booksList === 'object' && !Array.isArray(booksList))
+  // Handle a single object
+  ul
+    li= 'id: ' + booksList.id + ', name: ' + booksList.name
+- else if (Array.isArray(booksList))
+  // Handle an array of objects
+  ul
+    each book in booksList
+      li= 'id: ' + book.id + ', name: ' + book.name
+- else
+  // Handle other data types or empty data
+  p No valid data received
